@@ -28,9 +28,9 @@ export default {
     async callApi() {
       const url = 'http://localhost:8081/api/input';
       const headers = {
-        'X-Xsrf-Token': 'eebee02f-a0da-49bc-8b0d-9a02bd076728',
+        'X-Xsrf-Token': '12f2e33a-0dde-4bc0-8086-4c86cea2a24c',
         'Content-Type': 'application/xml',
-        'Authorization': 'eyJraWQiOiI0NzIwZWVlOWY5OWViOTZhNjM2OGY2MDNiZWU2OWZjNmNlZWY1MTdjIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI3MTBlZGE4MS1lMDE5LTQwM2YtYmI0Ny1hYzExOTQwMDFlZDgiLCJzY3AiOlsib3Rkczpncm91cHMiLCJvdGRzOnJvbGVzIl0sInJvbGUiOltdLCJncnAiOlsiZW1wb3dlcmFkbWluc0BleHN0cmVhbS5yb2xlIiwidGVuYW50YWRtaW5zQGV4c3RyZWFtLnJvbGUiXSwiZG1wIjp7Ik9URFNfQ1JFRFNfQVVUSCI6InRydWUiLCJPVERTX0hBU19QQVNTV09SRCI6ImZhbHNlIn0sInJ0aSI6Ijg3NDlmOGUyLTdlMzktNDgzNy1hMTU2LWM4OGIzNTMxM2RiZCIsInNhdCI6MTczMjEwMTgxMiwiaXNzIjoiaHR0cHM6Ly90ZC1leHN0cmVhbWNuLmVpbWRlbW8uY29tOjQ0My9vdGRzd3MiLCJncnQiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJzdWJfdHlwIjowLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJwaWQiOiJleHN0cmVhbS5yb2xlIiwicmlkIjp7fSwidGlkIjoiaW5ub3ZhdGUiLCJzaWQiOiI1NGMzZTdiNS1hNDUyLTQ5ZTEtYmVjMC01MmYwZWMzNWU1MWYiLCJ1aWQiOiJ0ZW5hbnRhZG1pbkBleHN0cmVhbS5yb2xlIiwidW5tIjoidGVuYW50YWRtaW4iLCJuYW1lIjoidGVuYW50YWRtaW4iLCJleHAiOjE3MzIxMDI3NDUsImlhdCI6MTczMjEwMTg0NSwianRpIjoiMmViZWUxMWMtNWVmMS00MWVkLTg5NTgtOThmZjEwNTA0NjBkIiwiY2lkIjoiRXhzdHJlYW1TeXN0ZW0ifQ.R3pjecbXIdYkMrudqEwAc9Y6Wu7xn7VQAUvwwjtUbjDEPW9tYh7CxkMLStOOF6LhpW3zj5Jg3PEVmTgpyyMnmr9-UFoL203nsvIO8TaVfDwRXv6l_FMepUIxlvggCMtAat4e1Roub4z4bLvc7VHrlgGehkSFhRWOps51MBDgGrGZeV4Fh0xiEvAdvWBTN5lUN3U4Q7zy1LdxUTnHVQpRxUD3JslIxwY79AeZvg3BqDniuIxhJL9elaeeQRQuvlAEe1bxyoCn3mN1VjO5SvwDiNk-w1QqUEPBdwVFAtOb8f2lxkN9t1alw9PJKqUlNWQf2DHSubt08Oa_lXH-q3FcJA',
+        'Authorization': 'eyJraWQiOiI0NzIwZWVlOWY5OWViOTZhNjM2OGY2MDNiZWU2OWZjNmNlZWY1MTdjIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI3MTBlZGE4MS1lMDE5LTQwM2YtYmI0Ny1hYzExOTQwMDFlZDgiLCJzY3AiOlsib3Rkczpncm91cHMiLCJvdGRzOnJvbGVzIl0sInJvbGUiOltdLCJncnAiOlsiZW1wb3dlcmFkbWluc0BleHN0cmVhbS5yb2xlIiwidGVuYW50YWRtaW5zQGV4c3RyZWFtLnJvbGUiXSwiZG1wIjp7Ik9URFNfQ1JFRFNfQVVUSCI6InRydWUiLCJPVERTX0hBU19QQVNTV09SRCI6ImZhbHNlIn0sInJ0aSI6IjFmZGRiZjkwLTg0YWItNDZkMC04NDkyLWIwOTc2NmFiMGUzMiIsInNhdCI6MTczMjE4OTI4NywiaXNzIjoiaHR0cHM6Ly90ZC1leHN0cmVhbWNuLmVpbWRlbW8uY29tOjQ0My9vdGRzd3MiLCJncnQiOiJhdXRob3JpemF0aW9uX2NvZGUiLCJzdWJfdHlwIjowLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJwaWQiOiJleHN0cmVhbS5yb2xlIiwicmlkIjp7fSwidGlkIjoiaW5ub3ZhdGUiLCJzaWQiOiJlOWUxODVhZi00ZDJmLTQzYmUtOTI1My1kODZlMTgwYWVlMTIiLCJ1aWQiOiJ0ZW5hbnRhZG1pbkBleHN0cmVhbS5yb2xlIiwidW5tIjoidGVuYW50YWRtaW4iLCJuYW1lIjoidGVuYW50YWRtaW4iLCJleHAiOjE3MzIxOTAxODcsImlhdCI6MTczMjE4OTI4NywianRpIjoiNjAzNTQyZWEtODVkMy00YzBlLTgyOWItYTU5Yzk1OWZiMTdiIiwiY2lkIjoiRXhzdHJlYW1TeXN0ZW0ifQ.G683f4H4VEYHjk0GOHOUGWaT8gpX1u38uaFdpkvPJ19ZmcNYNfcpYVNw4HOOWxdZpC5pdNqGflTr3U5EODFBWwzFCZwXt2SxJh8Cn6ZajVPFgV4P7Fu0TwOJAVjQU7wYeppVWmZ1_ljk0lyoCAIkIEP0I8ON9YQfQdKKzoNbINSx9P-wPdA7S_00upjnxTrcnECNu_U1If0ZUP_NPcBNkY14Kosk86SchHW91QQDyH7MRudye5e3u_wdnMBTJhoHZGSNn38lYkGycRNcx8DUAKMOiSh0-5DeG3kArFOYh2cuH_NZeLAmnqsStAFq3rsaKN3tLPaF78pYr_xFZBCmMg',
       };
 
       const xmlData = `<Invoice>
@@ -92,7 +92,10 @@ export default {
 
         // Check if the response contains a base64-encoded PDF string
         if (response.data && response.data.data && response.data.data[0].content) {
-          const base64Pdf = response.data.data[0].content;
+          //const base64Pdf = response.data.data[0].content;
+          const base64Pdf = response.data.data
+    .filter(item => item.mimeType === "application/pdf")
+    .map(item => item.content);
 
           // Convert base64 string to Blob
           const byteCharacters = atob(base64Pdf);
