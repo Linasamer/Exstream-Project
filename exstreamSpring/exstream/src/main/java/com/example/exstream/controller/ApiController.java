@@ -1,5 +1,6 @@
-package com.example.exstream;
+package com.example.exstream.controller;
 
+import com.example.exstream.service.ThirdPartyService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
