@@ -10,11 +10,12 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")  // Allows all endpoints
-                .allowedOrigins("http://localhost:8080")  // Your Vue.js frontend URL
-                .allowedMethods("GET", "POST", "PUT", "DELETE")  // Allowable HTTP methods
+        registry.addMapping("/**")
+                .allowedOrigins("*")  // Allow requests from any origin
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")  // Include OPTIONS for preflight
                 .allowedHeaders("*")  // Allow any headers
-                .allowCredentials(true)  // Allow cookies
-                .maxAge(3600);  // Caching the preflight response for 1 hour
+                .allowCredentials(false)  // Set to true only if credentials are needed
+                .maxAge(3600);  // Cache the preflight response for 1 hour
     }
+
 }
