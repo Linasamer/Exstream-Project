@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/sms")
 @CrossOrigin(origins = "*")
-public class SmsController {
+    public class SmsController {
     private final SmsService smsService;
 
     public SmsController(SmsService smsService) {

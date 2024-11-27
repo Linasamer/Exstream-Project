@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
 public class ApiController {
 
     private final ThirdPartyService thirdPartyService;
@@ -22,10 +22,8 @@ public class ApiController {
     }
 
     @PostMapping("/input")
-    public ResponseEntity<String> sendInput(@RequestHeader(value = "X-Xsrf-Token") String xsrfToken,
-                                            @RequestHeader(value = "Authorization") String authorization,
-                                            @RequestBody String xmlInput) {
-        String response = thirdPartyService.sendInput(xsrfToken, authorization, xmlInput);
+    public ResponseEntity<String> sendInput(@RequestBody String xmlInput) {
+        String response = thirdPartyService.sendInput( xmlInput);
         return ResponseEntity.ok(response);
     }
 }
