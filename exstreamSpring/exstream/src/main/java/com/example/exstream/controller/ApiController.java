@@ -22,8 +22,10 @@ public class ApiController {
     }
 
     @PostMapping("/input")
-    public ResponseEntity<String> sendInput(@RequestBody String xmlInput) {
-        String response = thirdPartyService.sendInput( xmlInput);
+    public ResponseEntity<String> sendInput(@RequestBody String xmlInput, @RequestHeader(value = "Type") Integer type) {
+        String response = thirdPartyService.sendInput( xmlInput, type);
         return ResponseEntity.ok(response);
     }
+
+
 }

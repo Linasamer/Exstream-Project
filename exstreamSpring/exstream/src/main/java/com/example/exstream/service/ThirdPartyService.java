@@ -18,6 +18,9 @@ public class ThirdPartyService {
     @Value("${thirdparty.input-url}")
     private String inputUrl;
 
+    @Value("${thirdpartyBank.input-url}")
+    private String inputUrlBank;
+
     @Value("${thirdparty.xsrf-url}")
     private String xsrfUrl;
 
@@ -73,7 +76,7 @@ public class ThirdPartyService {
     }
 
     // Send Input
-    public String sendInput(String xmlInput) {
+    public String sendInput(String xmlInput, Integer type) {
         if (authToken == null) {
             authToken = authenticate(); // Step 2: Authenticate using XSRF Token
             xsrfToken = getXsrfToken(); // Step 1: Get XSRF Token
@@ -89,7 +92,13 @@ public class ThirdPartyService {
         HttpEntity<String> entity = new HttpEntity<>(xmlInput, headers);
 
         try {
-            ResponseEntity<String> response = restTemplate.postForEntity(inputUrl, entity, String.class);
+            ResponseEntity<String> response = null;
+            if(type == 0){
+             response = restTemplate.postForEntity(inputUrl, entity, String.class);
+            }
+            else {
+                response = restTemplate.postForEntity(inputUrlBank, entity, String.class);
+            }
             return response.getBody();
         } catch (HttpClientErrorException | HttpServerErrorException ex) {
             throw new RuntimeException("Failed to send input: " + ex.getResponseBodyAsString(), ex);
