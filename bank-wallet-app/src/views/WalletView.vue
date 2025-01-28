@@ -35,82 +35,100 @@ const callApi = async () => {
     'Type': 1,
   };
 
-  const xmlData = `<Invoice>
-  <Language>EN</Language>
-  <CompanyDetails>
-    <CompanyName>Mage Bank</CompanyName>
-    <CompanyEmail>contact@mageBank.com</CompanyEmail>
-    <CompanyWebsite>www.mageBank.com</CompanyWebsite>
-    <CompanyAddress>123 Business Street</CompanyAddress>
-    <CompanyCityStateZip>Cairo, Egypt 12345</CompanyCityStateZip>
-  </CompanyDetails>
-  <CustomerDetails>
-    <Name>John Doe</Name>
-    <Address>
-      <Line1>Cairo</Line1>
-      <Line2>Egypt</Line2>
-    </Address>
-    <PhoneNumber>01154985811</PhoneNumber>
+  const xmlData = `<?xml version="1.0" encoding="UTF-8" ?>
+<Driver> 
+  <Customer>
+    <CustomerLanguage>EN</CustomerLanguage>
+    <Role>Manager</Role>
+    <CustomerName>Moaz Ahmed</CustomerName>
+    <CustomerAddress>Cairo, Egypt</CustomerAddress>
+    <CustomerPhone>01154985811</CustomerPhone>
     <CustomerID>ABC12345</CustomerID>
-  </CustomerDetails>
-  <InvoiceDetails>
-    <InvoiceNumber>2011010048941848</InvoiceNumber>
-    <StatementNumber>100</StatementNumber>
-    <Period>
-      <StartDate>01/10/2024</StartDate>
-      <EndDate>31/10/2024</EndDate>
-    </Period>
-    <InvoiceDate>01/11/2024</InvoiceDate>
-    <PaymentDueDate>22/11/2024</PaymentDueDate>
-  </InvoiceDetails>
-  <AccountSummary>
-    <PreviousBalance>3000.00</PreviousBalance>
-    <CreditsSummery>1500.00</CreditsSummery>
-    <NewCharges>550.00</NewCharges>
-    <TotalBalanceDue>2050.00</TotalBalanceDue>
-  </AccountSummary>
-  <Transactions>
-    <Transaction>
-      <Date>06/20/2009</Date>
-      <InvoiceNumber>INV556611</InvoiceNumber>
-      <Description>Previous Balance (Forwarded)</Description>
-      <Charges>3000.00</Charges>
-      <Credits>0.00</Credits>
-      <LineTotal>3000.00</LineTotal>
-    </Transaction>
-    <Transaction>
-      <Date>06/30/2009</Date>
-      <InvoiceNumber>INV556611</InvoiceNumber>
-      <Description>New Charges for INV556611</Description>
-      <Charges>500.00</Charges>
-      <Credits>0.00</Credits>
-      <LineTotal>3500.00</LineTotal>
-    </Transaction>
-    <Transaction>
-      <Date>06/30/2009</Date>
-      <InvoiceNumber>INV556600</InvoiceNumber>
-      <Description>Payment overdue charge (5%)</Description>
-      <Charges>37.50</Charges>
-      <Credits>0.00</Credits>
-      <LineTotal>3537.50</LineTotal>
-    </Transaction>
-    <Transaction>
-      <Date>07/03/2009</Date>
-      <InvoiceNumber>INV556611</InvoiceNumber>
-      <Description>Payment Received</Description>
-      <Charges>0.00</Charges>
-      <Credits>1250.00</Credits>
-      <LineTotal>2287.50</LineTotal>
-    </Transaction>
-  </Transactions>
-  <Footer>
-    <BankDetails>
-      <Name>Maga Bank</Name>
-      <PhoneNumber>01112345678</PhoneNumber>
-    </BankDetails>
-    <AccountCurrentBalance>2287.50</AccountCurrentBalance>
-  </Footer>
-</Invoice>`;
+    <CustomerEmail>moaz.ahmed@example.com</CustomerEmail>
+    <homeownershipt>Home Equity</homeownershipt>
+    <Summary>
+        <Month>January</Month>
+        <OpeningBalance>3000.00</OpeningBalance>
+        <TotalDeposits>1750.00</TotalDeposits>
+        <TotalWithdrawals>1462.50</TotalWithdrawals>
+        <ClosingBalance>3287.50</ClosingBalance>
+    </Summary>
+    <Transactions>
+        <Transaction>
+            <Date>2023-01-01</Date>
+            <Invoice>INV001</Invoice>
+            <PreviousBalance>3000.00</PreviousBalance>
+            <Description>Initial Deposit</Description>
+            <Type>Deposit</Type>
+            <Amount>500.00</Amount>
+            <TotalBalance>3500.00</TotalBalance>
+        </Transaction>
+        <Transaction>
+            <Date>2023-01-05</Date>
+            <Invoice>INV002</Invoice>
+            <PreviousBalance>3500.00</PreviousBalance>
+            <Description>Purchase of Products</Description>
+            <Type>Withdrawal</Type>
+            <Amount>200.00</Amount>
+            <TotalBalance>3300.00</TotalBalance>
+        </Transaction>
+        <Transaction>
+            <Date>2023-01-10</Date>
+            <Invoice>INV003</Invoice>
+            <PreviousBalance>3300.00</PreviousBalance>
+            <Description>Payment from Client</Description>
+            <Type>Deposit</Type>
+            <Amount>300.00</Amount>
+            <TotalBalance>3600.00</TotalBalance>
+        </Transaction>
+        <Transaction>
+            <Date>2023-01-15</Date>
+            <Invoice>INV004</Invoice>
+            <PreviousBalance>3600.00</PreviousBalance>
+            <Description>Service Charge</Description>
+            <Type>Withdrawal</Type>
+            <Amount>50.00</Amount>
+            <TotalBalance>3550.00</TotalBalance>
+        </Transaction>
+        <Transaction>
+            <Date>2023-01-20</Date>
+            <Invoice>INV005</Invoice>
+            <PreviousBalance>3550.00</PreviousBalance>
+            <Description>Refund</Description>
+            <Type>Deposit</Type>
+            <Amount>100.00</Amount>
+            <TotalBalance>3650.00</TotalBalance>
+        </Transaction>
+        <Transaction>
+            <Date>2023-01-25</Date>
+            <Invoice>INV006</Invoice>
+            <PreviousBalance>3650.00</PreviousBalance>
+            <Description>Additional Service Charge</Description>
+            <Type>Withdrawal</Type>
+            <Amount>150.00</Amount>
+            <TotalBalance>3500.00</TotalBalance>
+        </Transaction>
+        <Transaction>
+            <Date>2023-01-28</Date>
+            <Invoice>INV007</Invoice>
+            <PreviousBalance>3500.00</PreviousBalance>
+            <Description>Client Payment</Description>
+            <Type>Deposit</Type>
+            <Amount>250.00</Amount>
+            <TotalBalance>3750.00</TotalBalance>
+        </Transaction>
+        <Transaction>
+            <Date>2023-01-31</Date>
+            <Invoice>INV008</Invoice>
+            <PreviousBalance>3750.00</PreviousBalance>
+            <Description>Final Adjustment</Description>
+            <Type>Withdrawal</Type>
+            <Amount>462.50</Amount>
+            <TotalBalance>3287.50</TotalBalance>
+        </Transaction>
+    </Transactions>
+  </Customer>
+</Driver>`;
 
   try {
     const response = await axios.post(url, xmlData, { headers });
