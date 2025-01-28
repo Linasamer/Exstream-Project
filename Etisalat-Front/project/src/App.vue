@@ -173,6 +173,7 @@ const callApi = async () => {
   const url = 'http://localhost:8082/api/input';
   const headers = {
     'Content-Type': 'application/xml',
+    'Type': 0,
   };
 
   const xmlData = `<Invoice>
